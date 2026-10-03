@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensor: FS-104</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            background-color: #fff;
+            min-height: 100vh;
+            box-shadow: 0 0 15px rgba(0,0,0,0.05);
+        }
+        /* Толгой хэсэг (Цэнхэр өнгөөр) */
+        .header {
+            background-color: #0056b3; 
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid #ff9900;
+        }
+        .header h1 { margin: 0; font-size: 28px; letter-spacing: 1px; }
+        .header p { margin: 5px 0 0 0; font-size: 14px; opacity: 0.9; }
+        
+        .content { padding: 20px; }
+        
+        .sensor-image {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            margin-bottom: 15px;
+        }
+
+        /* Мэдээллийн хэсгүүдийн гарчиг */
+        .section-title {
+            font-size: 14px;
+            color: #0056b3;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin: 20px 0 10px 0;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        /* Хүснэгтийн дизайн */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        th, td {
+            padding: 10px 5px;
+            border-bottom: 1px solid #f0f0f0;
+            text-align: left;
+        }
+        th { 
+            color: #666; 
+            width: 40%; 
+            font-weight: normal;
+        }
+        td { 
+            font-weight: bold; 
+            color: #222; 
+        }
+
+        /* Чиглэл харуулах хэсэг (From -> To) */
+        .routing-box {
+            background-color: #eef5ff;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #004085;
+            border: 1px solid #b8daff;
+        }
+        .arrow { color: #ff9900; font-size: 18px; margin: 0 10px; }
+
+        /* Утас холболтын өнгө (Wiring) */
+        .wire-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .wire-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            margin-right: 10px;
+            border: 1px solid #999;
+        }
+        
+        /* Товчлуур */
+        .btn {
+            display: block;
+            background-color: #28a745;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 6px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        .btn:active { background-color: #1e7e34; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 1. Толгойн мэдээлэл -->
+        <div class="header">
+            <h1>FIT-2201</h1>
+            <p>Tag ID</p>
+        </div>
+        
+        <div class="content">
+            <!-- 2. Мэдрэгчийн зураг -->
+            <img src="images/sensor-01.jpg" alt="Flow Sensor Image" class="sensor-image">
+            
+            <!-- 3. Урсгалын чиглэл (Байршил) -->
+            <div class="routing-box">
+                FLocculent <span class="arrow">➔</span> Mixing Machine 1
+            </div>
+
+            <!-- 4. Ерөнхий мэдээлэл -->
+            <div class="section-title">General Information</div>
+            <table>
+                <tr>
+                    <th>Equipment Type</th>
+                    <td>Flow Sensor</td>
+                </tr>
+                <tr>
+                    <th>Manufacturer</th>
+                    <td>Rosemount</td>
+                </tr>
+                <tr>
+                    <th>Model</th>
+                    <td>8705</td>
+                </tr>
+                <tr>
+                    <th>Target Fluid</th>
+                    <td>Water / Floc</td>
+                </tr>
+            </table>
+
+            <!-- 5. Техникийн үзүүлэлт -->
+            <div class="section-title">Technical Specifications</div>
+            <table>
+                <tr>
+                    <th>Flow Range</th>
+                    <td>0 - 500 L/min</td>
+                </tr>
+                <tr>
+                    <th>Max Pressure</th>
+                    <td>10 Bar (1.0 MPa)</td>
+		</tr>
+                <tr>
+                    <th>URV</th>
+                    <td>300 L/min</td>
+		</tr>
+                <tr>
+                    <th>LRV</th>
+                    <td>0 L/min</td>
+                </tr>
+                <tr>
+                    <th>Output Signal</th>
+                    <td>4-20mA / Pulse</td>
+                </tr>
+                <tr>
+                    <th>Power Supply</th>
+                    <td>24V DC</td>
+                </tr>
+            </table>
+
+            <!-- 6. Утас холболт (Wiring) -->
+            <div class="section-title">Wiring Diagram</div>
+            <div class="wire-item">
+                <div class="wire-color" style="background-color: brown;"></div> 
+                Brown: +24V DC
+            </div>
+            <div class="wire-item">
+                <div class="wire-color" style="background-color: blue;"></div> 
+                Blue: 0V
+            </div>
+            <div class="wire-item">
+                <div class="wire-color" style="background-color: black;"></div> 
+                Black: Output 1 (Flow rate)
+            </div>
+            <div class="wire-item">
+                <div class="wire-color" style="background-color: white;"></div> 
+                White: Output 2 (Pulse/Alarm)
+            </div>
+
+            <!-- 7. Засвар үйлчилгээ -->
+            <div class="section-title">Maintenance</div>
+            <table>
+                <tr>
+                    <th>Last Calibrated</th>
+                    <td>2026-09-09</td>
+                </tr>
+                <tr>
+                    <th>Installed By</th>
+                    <td>Munkhsaikhan (Maintenance)</td>
+                </tr>
+                <tr>
+                    <th>Note</th>
+                    <td style="color: red;">Clean filter every 6 months</td>
+                </tr>
+            </table>
+
+            <!-- 8. Datasheet татах холбоос -->
+            <a href="pdfs/sensor-01.pdf" class="btn" target="_blank">
+                📥 Download Datasheet (PDF)
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
