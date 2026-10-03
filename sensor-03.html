@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIT-2201 Sensor - Oyu Tolgoi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9ecef;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            min-height: 100vh;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        /* Толгой хэсэг */
+        .header {
+            background-color: #004b93;
+            color: white;
+            text-align: center;
+            padding: 18px 15px;
+            border-bottom: 4px solid #ffaa00;
+        }
+        .company-tag {
+            font-size: 12px;
+            font-weight: bold;
+            color: #ffaa00;
+            letter-spacing: 1.5px;
+            margin-bottom: 2px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .team-name {
+            margin: 3px 0 0 0;
+            font-size: 12px;
+            color: #b0c4de;
+        }
+        
+        .content {
+            padding: 15px;
+        }
+
+        /* Зургийн хэсэг */
+        .image-box {
+            text-align: center;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            background: #fff;
+        }
+        .image-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+        }
+
+        /* Байршил / Урсгал харуулах хэсэг */
+        .location-box {
+            background-color: #eef5ff;
+            border: 1px solid #b8daff;
+            color: #004085;
+            text-align: center;
+            padding: 10px;
+            border-radius: 6px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        /* Хүснэгт болон секцийн гарчиг */
+        .section-title {
+            font-size: 12px;
+            font-weight: bold;
+            color: #004b93;
+            margin: 15px 0 5px 2px;
+            letter-spacing: 0.5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            font-size: 14px;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 10px 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        th {
+            background-color: #f8f9fa;
+            width: 42%;
+            color: #555;
+            font-weight: 600;
+        }
+        td {
+            color: #222;
+            font-weight: 500;
+        }
+
+        /* Wiring diagram цэгүүд */
+        .wiring-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+        .dot {
+            height: 12px;
+            width: 12px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+        }
+
+        /* Datasheet татах товч */
+        .btn {
+            display: block;
+            background-color: #28a745;
+            color: white;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 6px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .btn:active {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Толгой хэсэг -->
+        <div class="header">
+            <div class="company-tag">OYU TOLGOI</div>
+            <h1>MTR-2201</h1>
+            <div class="team-name">Concentrator E&I Team</div>
+        </div>
+        
+        <div class="content">
+            <!-- Зураг -->
+            <div class="image-box">
+                <img src="images/sensor-03.jpg" alt="FIT-2201 Sensor">
+            </div>
+
+            <!-- Байршил -->
+            <div class="location-box">
+                FLlocculent ➔ MOTOR 1
+            </div>
+
+            <!-- GENERAL INFORMATION -->
+            <div class="section-title">GENERAL INFORMATION</div>
+            <table>
+                <tr>
+                    <th>Equipment Type</th>
+                    <td>MOTOR</td>
+                </tr>
+                <tr>
+                    <th>Manufacturer</th>
+                    <td>Siemens</td>
+                </tr>
+                <tr>
+                    <th>Model</th>
+                    <td>5555</td>
+                </tr>
+                <tr>
+                    <th>Target Fluid</th>
+                    <td>Water / Floc</td>
+                </tr>
+            </table>
+
+            <!-- TECHNICAL SPECIFICATIONS -->
+            <div class="section-title">TECHNICAL SPECIFICATIONS</div>
+            <table>
+                <tr>
+                    <th>Flow Range</th>
+                    <td>0 - 500 L/min</td>
+                </tr>
+                <tr>
+                    <th>Max Pressure</th>
+                    <td>10 Bar (1.0 MPa)</td>
+                </tr>
+                <tr>
+                    <th>URV</th>
+                    <td>300 L/min</td>
+                </tr>
+                <tr>
+                    <th>LRV</th>
+                    <td>0 L/min</td>
+                </tr>
+                <tr>
+                    <th>Output Signal</th>
+                    <td>4-20mA / Pulse</td>
+                </tr>
+                <tr>
+                    <th>Power Supply</th>
+                    <td>24V DC</td>
+                </tr>
+            </table>
+
+            <!-- WIRING DIAGRAM -->
+            <div class="section-title">WIRING DIAGRAM</div>
+            <table style="padding: 5px;">
+                <tr>
+                    <td style="padding: 10px;">
+                        <div class="wiring-item"><span class="dot" style="background-color: #8B0000;"></span> <b>Brown:</b> +24V DC</div>
+                        <div class="wiring-item"><span class="dot" style="background-color: #0000CD;"></span> <b>Blue:</b> 0V</div>
+                        <div class="wiring-item"><span class="dot" style="background-color: #000000;"></span> <b>Black:</b> Output 1 (Flow rate)</div>
+                        <div class="wiring-item"><span class="dot" style="background-color: #D3D3D3; border: 1px solid #888;"></span> <b>White:</b> Output 2 (Pulse/Alarm)</div>
+                    </td>
+                </tr>
+            </table>
+
+            <!-- MAINTENANCE -->
+            <div class="section-title">MAINTENANCE</div>
+            <table>
+                <tr>
+                    <th>Last Calibrated</th>
+                    <td>2026-09-09</td>
+                </tr>
+                <tr>
+                    <th>Installed By</th>
+                    <td>Munkhsaikhan (Maintenance)</td>
+                </tr>
+                <tr>
+                    <th>Note</th>
+                    <td style="color: #d9534f; font-weight: bold;">Clean filter every 6 months</td>
+                </tr>
+            </table>
+
+            <!-- Datasheet татах товч -->
+            <a href="pdfs/sensor-01.pdf" class="btn" target="_blank">
+                📥 Download Datasheet (PDF)
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
